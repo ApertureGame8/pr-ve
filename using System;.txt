@@ -1,0 +1,378 @@
+using System;
+
+namespace ConsoleApplication3
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            for (int i = 1; i < 6; i++) 
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+using System;
+
+namespace ConsoleApplication3
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.Write("Skriv inn et tall: ");
+            int tall = int.Parse(Console.ReadLine());
+
+            if (tall > 10)
+            {
+                Console.WriteLine("Tallet er større en 10");
+            }
+            else if (tall < 10)
+            {
+                Console.WriteLine("Tallet er mindre en 10");
+            }
+            else
+            {
+                Console.WriteLine("Tallet er 10");
+            }
+        }
+    }
+}
+
+
+using System;
+
+namespace ConsoleApplication3
+{
+  class Program
+  {
+    static void MyMethod()
+    {
+      Console.WriteLine("Hei Verden!");
+    }
+
+    static void Main(string[] args)
+    {
+      MyMethod();
+    }
+  }
+}
+
+
+using System;
+
+namespace ConsoleApplication3
+{
+  class Program
+    {
+    static void Main(string[] args)
+    {
+      string[] navn = {"Adam, Lucas, Preben"};
+      for (int i = 0; i < navn.Length; i++) 
+      {
+        Console.WriteLine(navn[i]);
+      }
+    }
+  }
+}
+
+
+using System;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SjekkTall();
+        }
+
+        static void SjekkTall()
+        {
+            Console.Write("Skriv inn et tall: ");
+            int tall = int.Parse(Console.ReadLine());
+
+            if (tall > 0)
+            {
+                Console.WriteLine("Tallet er positivt.");
+            }
+            else if (tall < 0)
+            {
+                Console.WriteLine("Tallet er negativt.");
+            }
+            else
+            {
+                Console.WriteLine("Tallet er null.");
+            }
+        }
+    }
+}
+
+
+using System;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 5;
+            while (i > 0) 
+            {
+                Console.WriteLine(i);
+                i--;
+            }
+        }
+    }
+}
+
+using System;
+
+namespace ConsoleApplication3
+{
+   class Program
+   {
+      static double Kvadrat(double tall) => tall * tall;
+
+      static void Main()
+      {
+         double x = 7.9;
+         Console.WriteLine(Kvadrat(x));
+       }
+    }
+}
+
+using System;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }  
+}
+
+using System;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main()
+        {
+            int[] tall = { 3, 7, 2, 9 };
+            int sum = 0;
+
+            foreach (int t in tall)
+                sum += t;
+
+            Console.WriteLine($"Summen er {sum}");
+        }
+    }
+}
+
+using System;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main()
+        {
+            int[,] pattern = new int[,]
+            {
+                { 0, 0, 0, 1 },
+                { 1, 0, 1, 1 }
+            };
+
+            for (int i = 0; i < pattern.GetLength(0); i++)
+            {
+                for (int j = 0; j < pattern.GetLength(1); j++)
+                {
+                    Console.Write(pattern[i, j]);
+                    if (!(i == pattern.GetLength(0) - 1 && j == pattern.GetLength(1) - 1))
+                        Console.Write(" ");
+                }
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
+
+
+using System;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SjekkTall();
+        }
+        static void SjekkTall()
+        {
+            Console.Write("Skriv inn et tall: ");
+            int tall = int.Parse(Console.ReadLine());
+
+            if (tall > 0)
+            {
+                Console.WriteLine("Tallet er positivt.");
+            }
+            else if (tall < 0)
+            {
+                Console.WriteLine("Tallet er negativt.");
+            }
+            else
+            {
+                Console.WriteLine("Tallet er null.");
+            }
+        }
+    }
+}
+
+using System;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static long Fakultet(int n)
+        {
+            if (n < 0)
+                throw new ArgumentOutOfRangeException(nameof(n), "n må være >= 0");
+
+            if (n <= 1)
+                return 1;
+
+            checked
+            {
+                return n * Fakultet(n - 1);
+            }
+        }
+
+        static void Main()
+        {
+            Console.WriteLine(Fakultet(3)); // 6
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApplication3
+{
+    public static class TallHjelper
+    {
+        public static int FinnStorste(IEnumerable<int> tall)
+        {
+            if (tall == null) throw new ArgumentNullException(nameof(tall));
+
+            bool harVerdi = false;
+            int maks = 0;
+
+            foreach (var n in tall)
+            {
+                if (!harVerdi)
+                {
+                    maks = n;
+                    harVerdi = true;
+                }
+                else if (n > maks)
+                {
+                    maks = n;
+                }
+            }
+
+            if (!harVerdi) throw new ArgumentException("Listen/sekvensen kan ikke være tom.", nameof(tall));
+            return maks;
+        }
+    }
+}
+
+using System;
+using System.IO;
+using System.Linq;
+
+namespace SortArray
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            int[] numbers = GenerateRandomArray(10, 0, 100);
+            Console.WriteLine("Unsorted array:");
+            PrintArray(numbers);
+            
+            Sort(numbers);
+
+            Console.WriteLine("\nSorted array:");
+            PrintArray(numbers);
+            
+            string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(exeDirectory, "SortArrayNumbers.txt");
+            System.IO.File.WriteAllText(filePath, string.Join(",", numbers));
+
+            Console.WriteLine($"\nArray saved to file: {filePath}");
+            
+            string content = System.IO.File.ReadAllText(filePath);
+            int[] loadedNumbers = content.Split(',').Select(int.Parse).ToArray();
+
+            Console.WriteLine("\nArray read from file:");
+            PrintArray(loadedNumbers);
+            
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+        }
+
+        static void Sort(int[] arr)
+        {
+            int tmp;
+            int n = arr.Length;
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (arr[j] < arr[i])
+                    {
+                        tmp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = tmp;
+                    }
+                }
+            }
+        }
+
+        static int[] GenerateRandomArray(int size, int min, int max)
+        {
+            Random rand = new Random();
+            int[] arr = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                arr[i] = rand.Next(min, max + 1);
+            }
+            return arr;
+        }
+
+        static void PrintArray(int[] arr)
+        {
+            Console.WriteLine(string.Join(", ", arr));
+        }
+    }
+}
