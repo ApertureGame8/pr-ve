@@ -1,3 +1,4 @@
+1.
 using System;
 
 namespace ConsoleApplication3
@@ -13,7 +14,7 @@ namespace ConsoleApplication3
         }
     }
 }
-
+2.
 using System;
 
 namespace ConsoleApplication3
@@ -41,7 +42,7 @@ namespace ConsoleApplication3
     }
 }
 
-
+3.
 using System;
 
 namespace ConsoleApplication3
@@ -60,7 +61,7 @@ namespace ConsoleApplication3
   }
 }
 
-
+4.
 using System;
 
 namespace ConsoleApplication3
@@ -78,7 +79,7 @@ namespace ConsoleApplication3
   }
 }
 
-
+5.
 using System;
 
 namespace ConsoleApplication3
@@ -111,7 +112,7 @@ namespace ConsoleApplication3
     }
 }
 
-
+6.
 using System;
 
 namespace ConsoleApplication3
@@ -129,7 +130,7 @@ namespace ConsoleApplication3
         }
     }
 }
-
+7.
 using System;
 
 namespace ConsoleApplication3
@@ -145,7 +146,7 @@ namespace ConsoleApplication3
        }
     }
 }
-
+8.
 using System;
 
 namespace ConsoleApplication3
@@ -164,7 +165,7 @@ namespace ConsoleApplication3
         }
     }  
 }
-
+9.
 using System;
 
 namespace ConsoleApplication3
@@ -183,7 +184,7 @@ namespace ConsoleApplication3
         }
     }
 }
-
+10.
 using System;
 
 namespace ConsoleApplication3
@@ -213,7 +214,7 @@ namespace ConsoleApplication3
     }
 }
 
-
+11.
 using System;
 
 namespace ConsoleApplication3
@@ -244,7 +245,7 @@ namespace ConsoleApplication3
         }
     }
 }
-
+12.
 using System;
 
 namespace ConsoleApplication3
@@ -271,7 +272,7 @@ namespace ConsoleApplication3
         }
     }
 }
-
+13.
 using System;
 using System.Collections.Generic;
 
@@ -304,7 +305,7 @@ namespace ConsoleApplication3
         }
     }
 }
-
+Bonus Oppgave:
 using System;
 using System.IO;
 using System.Linq;
@@ -376,3 +377,4 @@ namespace SortArray
         }
     }
 }
+
